@@ -18,7 +18,7 @@ class Profile extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.profile.profile === null) {
+    if (nextProps.profile.profile === null && this.props.loading) {
       this.props.history.push('/not-found');
     }
   }
@@ -26,6 +26,7 @@ class Profile extends Component {
   render() {
 
     const { profile, loading } = this.props.profile;
+
     let profileContent;
 
     if (profile === null || loading) {

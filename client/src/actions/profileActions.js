@@ -156,7 +156,7 @@ export const setProfileLoading = () => {
   };
 };
 
-// Clear loading
+// Clear current profile
 export const clearCurrentProfile = () => {
   return {
     type: CLEAR_CURRENT_PROFILE
