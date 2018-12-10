@@ -67,7 +67,7 @@ class AddEducation extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="add-education">
+      <div className="add-education mt-5">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -116,7 +116,7 @@ class AddEducation extends Component {
                   error={errors.to}
                   disabled={this.state.disabled ? 'disabled' : ''}
                 />
-                <div className="form-check mb-4">
+                {/* <div className="form-check mb-4">
                   <input
                     type="checkbox"
                     className="form-check-input"
@@ -129,7 +129,7 @@ class AddEducation extends Component {
                   <label htmlFor="current" className="form-check-label">
                     Current Job
                     </label>
-                </div>
+                </div> */}
                 <TextAreaFieldGroup
                   placeholder="Program Description"
                   name="description"
@@ -138,7 +138,7 @@ class AddEducation extends Component {
                   error={errors.description}
                   info="Tell us about the program that you were in"
                 />
-                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" value="Submit" className="btn btn-secondary btn-block mt-4" />
               </form>
             </div>
           </div>

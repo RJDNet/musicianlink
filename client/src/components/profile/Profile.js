@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import ProfileHeader from './ProfileHeader';
 import ProfileAbout from './ProfileAbout';
 import ProfileCreds from './ProfileCreds';
-import ProfileGithub from './ProfileGithub';
 import Spinner from '../common/Spinner';
 import { getProfileByHandle } from '../../actions/profileActions';
 
@@ -47,13 +46,12 @@ class Profile extends Component {
           <ProfileCreds
             education={profile.education}
             experience={profile.experience} />
-          {profile.githubusername ? (<ProfileGithub username={profile.githubusername} />) : null}
         </div>
       )
     }
 
     return (
-      <div className="profile">
+      <div className="profile mt-5">
         <div className="container">
           <div className="row">
             <div className="col-md-12">

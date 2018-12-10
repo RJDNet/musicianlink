@@ -1,7 +1,7 @@
 {
-  "name": "devconnector",
+  "name": "musicianlink",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "A social network for connecting musicians",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",

@@ -16,14 +16,13 @@ class Landing extends Component {
       <div className="landing">
         <div className="dark-overlay landing-inner text-light">
           <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Developer Connector
-            </h1>
-                <p className="lead"> Create a developer profile/portfolio, share posts and get help from other developers</p>
+            <div className="mt-3 p-5">
+              <div className="col-md-12 text-left">
+                <h1 className="display-5 mb-4 pt-5 text-light">Musician Link</h1>
+                <p className="lead text-light mb-4">Create your personal profile and find like minded musicians!</p>
                 <hr />
-                <Link to="/register" className="btn btn-lg btn-info mr-2">Sign Up</Link>
-                <Link to="/login" className="btn btn-lg btn-light">Login</Link>
+                <Link to="/register" className="btn btn-primary p-2 mr-1" style={{ width: '100px' }}>Sign Up</Link>
+                <Link to="/login" className="btn btn-secondary p-2 ml-1" style={{ width: '100px' }}>Login</Link>
               </div>
             </div>
           </div>

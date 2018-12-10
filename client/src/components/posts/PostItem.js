@@ -9,7 +9,7 @@ class PostItem extends Component {
 
   onDeleteClick(id) {
     this.props.deletePost(id);
-  };
+  }
 
   onLikeClick(id) {
     this.props.addLike(id);
@@ -49,13 +49,13 @@ class PostItem extends Component {
             <p className="lead">{post.text}</p>
             {showActions ? (<span>
               <button onClick={this.onLikeClick.bind(this, post._id)} type="button" className="btn btn-light mr-1">
-                <i className={classnames('fas fa-thumbs-up', { 'text-info': this.findUserLike(post.likes) })}></i>
+                <i className={classnames('fas fa-thumbs-up', { 'text-secondary': this.findUserLike(post.likes) })}></i>
                 <span className="badge badge-light">{post.likes.length}</span>
               </button>
               <button onClick={this.onUnlikeClick.bind(this, post._id)} type="button" className="btn btn-light mr-1">
                 <i className="fas fa-thumbs-down"></i>
               </button>
-              <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
+              <Link to={`/post/${post._id}`} className="btn btn-secondary mr-1">
                 Comments
             </Link>
               {post.user === auth.user.id ? (

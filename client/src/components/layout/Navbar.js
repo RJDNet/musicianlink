@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
 
+import MainLogo from '../../img/mainlogonew2.png';
+
 class Navbar extends Component {
 
   onLogoutClick(e) {
@@ -20,16 +22,16 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/feed">Post Feed</Link>
+          <Link className="nav-link" to="/dashboard">Dashboard</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">Dashboard</Link>
+          <Link className="nav-link pt-2" to="/feed">Post Feed</Link>
         </li>
         <li className="nav-item">
           <a
             href=""
             onClick={this.onLogoutClick.bind(this)}
-            className="nav-link">
+            className="nav-link pt-2">
             <img
               className="rounded-circle"
               src={user.avatar}
@@ -54,22 +56,22 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
-        <div className="container">
-          <Link className="navbar-brand" to="/">DevConnector</Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-0 p-2">
 
-          <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/profiles">Developers</Link>
-              </li>
-            </ul>
-            {isAuthenticated ? authLinks : guestLinks}
-          </div>
+        <Link className="navbar-brand ml-4 p-0" to="/"><img alt='Logo' src={MainLogo} /></Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="mobile-nav">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/profiles">Find Musicians</Link>
+            </li>
+          </ul>
+          {isAuthenticated ? authLinks : guestLinks}
         </div>
+
       </nav>
     );
   }

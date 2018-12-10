@@ -24,7 +24,7 @@ class Posts extends Component {
     }
 
     return (
-      <div className="feed">
+      <div className="feed mt-5">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -39,8 +39,8 @@ class Posts extends Component {
 }
 
 Posts.propTypes = {
-  getPosts: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
+  getPosts: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({

@@ -90,7 +90,11 @@ router.post('/login', (req, res) => {
         //res.json({ msg: 'Success' });
         // User Matched
 
-        const payload = { id: user.id, name: user.name, avatar: user.avatar };
+        const payload = {
+          id: user.id,
+          name: user.name,
+          avatar: user.avatar
+        };
         // Create JTW payload
 
         // Sign Token

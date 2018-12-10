@@ -67,7 +67,7 @@ class AddExperience extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="add-experience">
+      <div className="add-experience mt-5">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -138,7 +138,7 @@ class AddExperience extends Component {
                   error={errors.description}
                   info="Tell us about the position"
                 />
-                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" value="Submit" className="btn btn-secondary btn-block mt-4" />
               </form>
             </div>
           </div>
