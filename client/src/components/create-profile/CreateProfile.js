@@ -13,10 +13,8 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInput: false,
       handle: '',
-      company: '',
       website: '',
       location: '',
-      status: '',
       skills: '',
       bio: '',
       twitter: '',
@@ -44,10 +42,8 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
       website: this.state.website,
       location: this.state.location,
-      status: this.state.status,
       skills: this.state.skills,
       bio: this.state.bio,
       twitter: this.state.twitter,
@@ -135,14 +131,6 @@ class CreateProfile extends Component {
                   info="A unique handle for your profile URL. Your full name, company name, nickname"
                 />
                 <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
-                  onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
-                />
-                <TextFieldGroup
                   placeholder="Website"
                   name="website"
                   value={this.state.website}
@@ -165,14 +153,6 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg. HTML,CSS,Javascrupt,PHP)"
-                />
-                <TextFieldGroup
-                  placeholder="Github Username"
-                  name="githubusername"
-                  value={this.state.githubusername}
-                  onChange={this.onChange}
-                  error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
                 />
                 <TextAreaFieldGroup
                   placeholder="Short Bio"

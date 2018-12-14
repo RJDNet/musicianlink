@@ -14,10 +14,8 @@ class EditProfile extends Component {
     this.state = {
       displaySocialInput: false,
       handle: '',
-      company: '',
       website: '',
       location: '',
-      status: '',
       skills: '',
       bio: '',
       twitter: '',
@@ -50,7 +48,6 @@ class EditProfile extends Component {
       const skillsCSV = profile.skills.join(',');
 
       // if profile field doesn't exist, make empty string
-      profile.company = !isEmpty(profile.company) ? profile.company : '';
       profile.website = !isEmpty(profile.website) ? profile.website : '';
       profile.location = !isEmpty(profile.location) ? profile.location : '';
       profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
@@ -64,10 +61,8 @@ class EditProfile extends Component {
       // Set component fields state
       this.setState({
         handle: profile.handle,
-        company: profile.company,
         website: profile.website,
         location: profile.location,
-        status: profile.status,
         skills: skillsCSV,
         bio: profile.bio,
         twitter: profile.twitter,
@@ -84,10 +79,8 @@ class EditProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
       website: this.state.website,
       location: this.state.location,
-      status: this.state.status,
       skills: this.state.skills,
       bio: this.state.bio,
       twitter: this.state.twitter,
@@ -176,14 +169,6 @@ class EditProfile extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                   info="A unique handle for your profile URL. Your full name, company name, nickname"
-                />
-                <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
-                  onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
                 />
                 <TextFieldGroup
                   placeholder="Website"
